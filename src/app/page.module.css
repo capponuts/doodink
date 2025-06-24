@@ -176,11 +176,51 @@ a.secondary {
   }
 }
 
+.logo-neon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  margin-bottom: 32px;
+}
+
+.logo-neon::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 18px;
+  box-shadow:
+    0 0 24px 8px #ffe600,
+    0 0 48px 16px #00ffe7;
+  pointer-events: none;
+  z-index: 1;
+  animation: neon-rotate 2.5s linear infinite;
+  border: 3px solid transparent;
+  background: conic-gradient(
+    from 0deg,
+    #ffe600 0deg 90deg,
+    #00ffe7 90deg 180deg,
+    #ffe600 180deg 270deg,
+    #00ffe7 270deg 360deg
+  );
+  mask-image: linear-gradient(#fff 0 0);
+  opacity: 0.7;
+}
+
+@keyframes neon-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .logo {
   width: 320px;
   height: auto;
   filter: drop-shadow(var(--neon-shadow-yellow)) drop-shadow(var(--neon-shadow-blue));
-  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+  border-radius: 12px;
 }
 
 .text {

@@ -75,14 +75,16 @@ export default function Home() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <Image
-          className={styles.logo}
-          src="/logo-doodink.png"
-          alt="Logo DOOD&#39;INK"
-          width={320}
-          height={320}
-          priority
-        />
+        <div className={styles["logo-neon"]}>
+          <Image
+            className={styles.logo}
+            src="/logo-doodink.png"
+            alt="Logo DOOD&#39;INK"
+            width={320}
+            height={320}
+            priority
+          />
+        </div>
       </motion.div>
       <motion.div
         className={styles.text}
