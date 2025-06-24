@@ -21,7 +21,7 @@ export default function Home() {
         <Image
           className={styles.logo}
           src="/logo-doodink.png"
-          alt="Logo DOOD'INK"
+          alt="Logo DOOD&#39;INK"
           width={320}
           height={320}
           priority
@@ -39,10 +39,10 @@ export default function Home() {
           fontWeight: 900,
           letterSpacing: 2
         }}>
-          DOOD'INK - Salon de Tatouage Privé à Falleron
+          DOOD&#39;INK - Salon de Tatouage Privé à Falleron
         </h1>
         <p style={{ marginTop: 24 }}>
-          Bienvenue sur la page officielle de DOOD'INK, votre salon de tatouage privé à Falleron.<br /><br />
+          Bienvenue sur la page officielle de DOOD&#39;INK, votre salon de tatouage privé à Falleron.<br /><br />
           Pour toute demande, contactez-moi en précisant vos coordonnées et en détaillant votre projet (taille, zone souhaitée, et quelques références appréciées).<br /><br />
           Pour un flash, joignez un screen du dessin désiré avec vos coordonnées.<br /><br />
           <span style={{ color: "var(--neon-blue)", fontWeight: 700 }}>Pas de piercing, ni de cover.</span><br /><br />
