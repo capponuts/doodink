@@ -6,7 +6,13 @@ import {
   Facebook,
   Instagram,
   Mail,
-  MessageCircle
+  MessageCircle,
+  Flower2,
+  PenLine,
+  Sparkles,
+  Star,
+  Feather,
+  Brush
 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
@@ -98,7 +104,7 @@ export default function Home() {
           fontWeight: 900,
           letterSpacing: 2
         }}>
-          DOOD&#39;INK - Salon de Tatouage Privé à Falleron
+          DOOD&#39;INK <span style={{fontSize:'2rem'}}>🖋️✨</span> - Salon de Tatouage Privé à Falleron
         </h1>
         <div style={{ margin: "18px 0 28px 0", fontWeight: 600, color: "var(--neon-blue)", fontSize: "1.1rem", textShadow: "var(--neon-shadow-blue)" }}>
           20 rue nationale<br />
@@ -126,15 +132,21 @@ export default function Home() {
             />
           </div>
         </div>
-        <div style={{ marginBottom: 24, color: "#fff", fontWeight: 500, fontSize: "1.05rem" }}>
-          <span style={{ color: "var(--neon-yellow)", fontWeight: 700 }}>Styles proposés :</span> Ornemental, Floral, Cartoon, Lettrage, Projet perso, Flash
+        {/* Grille de styles */}
+        <div className={styles["styles-grid"]}>
+          <div className={styles["style-card"]}><Flower2 className={styles["style-icon"]} color="#ffe600" /><span>Floral</span></div>
+          <div className={styles["style-card"]}><Feather className={styles["style-icon"]} color="#00ffe7" /><span>Ornemental</span></div>
+          <div className={styles["style-card"]}><Star className={styles["style-icon"]} color="#ffe600" /><span>Flash</span></div>
+          <div className={styles["style-card"]}><Brush className={styles["style-icon"]} color="#00ffe7" /><span>Projet perso</span></div>
+          <div className={styles["style-card"]}><Sparkles className={styles["style-icon"]} color="#ffe600" /><span>Cartoon</span></div>
+          <div className={styles["style-card"]}><PenLine className={styles["style-icon"]} color="#00ffe7" /><span>Lettrage</span></div>
         </div>
         <p style={{ marginTop: 0 }}>
-          Bienvenue sur la page officielle de DOOD&#39;INK, votre salon de tatouage privé à Falleron.<br /><br />
+          <span style={{fontSize:'1.2em'}}>👋</span> Bienvenue sur la page officielle de DOOD&#39;INK, votre salon de tatouage privé à Falleron.<br /><br />
           Pour toute demande, contactez-moi en précisant vos coordonnées et en détaillant votre projet (taille, zone souhaitée, et quelques références appréciées).<br /><br />
           Pour un flash, joignez un screen du dessin désiré avec vos coordonnées.<br /><br />
           <span style={{ color: "var(--neon-blue)", fontWeight: 700 }}>Pas de piercing, ni de cover.</span><br /><br />
-          <span style={{ color: "var(--neon-yellow)", fontWeight: 700 }}>Au plaisir de réaliser vos projets !</span>
+          <span style={{ color: "var(--neon-yellow)", fontWeight: 700 }}>Au plaisir de réaliser vos projets !</span> <span style={{fontSize:'1.2em'}}>🌟</span>
         </p>
       </motion.div>
       <motion.div
@@ -178,6 +190,11 @@ export default function Home() {
           <MessageCircle />
         </a>
       </motion.div>
+      <footer className={styles.footer}>
+        <span>© {new Date().getFullYear()} DOOD&#39;INK. Tous droits réservés.</span>
+        <span>|</span>
+        <span>Site créé par <a href="https://kapinfo.fr" target="_blank" rel="noopener noreferrer">Kapinfo</a></span>
+      </footer>
     </div>
   );
 }

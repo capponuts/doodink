@@ -184,34 +184,22 @@ a.secondary {
   width: 340px;
   height: 340px;
   margin-bottom: 32px;
-}
-
-.logo-neon::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
   border-radius: 18px;
-  box-shadow:
-    0 0 24px 8px #ffe600,
-    0 0 48px 16px #00ffe7;
-  pointer-events: none;
-  z-index: 1;
-  animation: neon-rotate 2.5s linear infinite;
-  border: 3px solid transparent;
-  background: conic-gradient(
-    from 0deg,
-    #ffe600 0deg 90deg,
-    #00ffe7 90deg 180deg,
-    #ffe600 180deg 270deg,
-    #00ffe7 270deg 360deg
-  );
-  mask-image: linear-gradient(#fff 0 0);
-  opacity: 0.7;
+  box-shadow: 0 0 16px #ffe600, 0 0 32px #00ffe7;
+  border: 3px solid var(--neon-blue);
+  overflow: hidden;
+  animation: neon-glow 2.2s ease-in-out infinite alternate;
 }
 
-@keyframes neon-rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 16px #ffe600, 0 0 32px #00ffe7;
+    border-color: var(--neon-blue);
+  }
+  100% {
+    box-shadow: 0 0 32px 8px #ffe600, 0 0 64px 16px #00ffe7;
+    border-color: var(--neon-yellow);
+  }
 }
 
 .logo {
@@ -259,4 +247,67 @@ a.secondary {
   box-shadow: 0 0 24px var(--neon-yellow), 0 0 32px var(--neon-blue);
   color: var(--neon-blue);
   border-color: var(--neon-yellow);
+}
+
+/* Grille de vignettes styles */
+.styles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.style-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #ffe60044, 0 0 16px #00ffe744;
+  border: 2px solid var(--neon-blue);
+  padding: 18px 20px 12px 20px;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+.style-card:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 0 24px #ffe600, 0 0 32px #00ffe7;
+  border-color: var(--neon-yellow);
+}
+
+.style-icon {
+  font-size: 2.1rem;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 0 6px #ffe60088) drop-shadow(0 0 8px #00ffe788);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 12px 0;
+  font-size: 1rem;
+  color: #aaa;
+  background: transparent;
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.footer a {
+  color: var(--neon-blue);
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--neon-yellow);
 }
