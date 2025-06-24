@@ -104,7 +104,6 @@ export default function Home() {
           fontWeight: 900,
           letterSpacing: 2
         }}>
-          DOOD&#39;INK<br/>
           <span style={{fontSize:'1.1rem', fontWeight:600}}>Salon de Tatouage Privé à Falleron</span>
         </h1>
         <div style={{ margin: "18px 0 28px 0", fontWeight: 600, color: "var(--neon-blue)", fontSize: "1.1rem", textShadow: "var(--neon-shadow-blue)" }}>
