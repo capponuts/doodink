@@ -1,6 +1,10 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --neon-yellow: #ffe600;
+  --neon-blue: #00ffe7;
+  --neon-shadow-yellow: 0 0 16px #ffe600, 0 0 32px #ffe60044;
+  --neon-shadow-blue: 0 0 16px #00ffe7, 0 0 32px #00ffe744;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +43,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+html {
+  color-scheme: dark;
 }

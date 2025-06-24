@@ -1,95 +1,103 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  MessageCircle,
+  Ghost
+} from "lucide-react";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/logo-doodink.png"
+          alt="Logo DOOD'INK"
+          width={320}
+          height={320}
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
+      </motion.div>
+      <motion.div
+        className={styles.text}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+      >
+        <h1 style={{
+          color: "var(--neon-yellow)",
+          textShadow: "var(--neon-shadow-yellow)",
+          fontWeight: 900,
+          letterSpacing: 2
+        }}>
+          DOOD'INK - Salon de Tatouage Privé à Falleron
+        </h1>
+        <p style={{ marginTop: 24 }}>
+          Bienvenue sur la page officielle de DOOD'INK, votre salon de tatouage privé à Falleron.<br /><br />
+          Pour toute demande, contactez-moi en précisant vos coordonnées et en détaillant votre projet (taille, zone souhaitée, et quelques références appréciées).<br /><br />
+          Pour un flash, joignez un screen du dessin désiré avec vos coordonnées.<br /><br />
+          <span style={{ color: "var(--neon-blue)", fontWeight: 700 }}>Pas de piercing, ni de cover.</span><br /><br />
+          <span style={{ color: "var(--neon-yellow)", fontWeight: 700 }}>Au plaisir de réaliser vos projets !</span>
+        </p>
+      </motion.div>
+      <motion.div
+        className={styles.socials}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+      >
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles["social-link"]}
+          href="https://facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <Facebook />
         </a>
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles["social-link"]}
+          href="https://instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <Instagram />
         </a>
         <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles["social-link"]}
+          href="https://snapchat.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Snapchat"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          <Ghost />
         </a>
-      </footer>
+        <a
+          className={styles["social-link"]}
+          href="mailto:contact@doodink.fr"
+          aria-label="Mail"
+        >
+          <Mail />
+        </a>
+        <a
+          className={styles["social-link"]}
+          href="https://wa.me/33600000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Whatsapp"
+        >
+          <MessageCircle />
+        </a>
+      </motion.div>
     </div>
   );
 }
