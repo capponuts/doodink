@@ -57,7 +57,7 @@ export default function Home() {
       >
         <a
           className={styles["social-link"]}
-          href="https://facebook.com/"
+          href="https://www.facebook.com/p/Doodink-100093254133040/?locale=fr_FR"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -66,7 +66,7 @@ export default function Home() {
         </a>
         <a
           className={styles["social-link"]}
-          href="https://instagram.com/"
+          href="https://www.instagram.com/doodink44/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
