@@ -6,8 +6,7 @@ import {
   Facebook,
   Instagram,
   Mail,
-  MessageCircle,
-  Ghost
+  MessageCircle
 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
