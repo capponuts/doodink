@@ -49,3 +49,10 @@ a {
 html {
   color-scheme: dark;
 }
+
+@media (min-width: 900px) {
+  html, body {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+}

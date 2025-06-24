@@ -103,6 +103,28 @@ export default function Home() {
           20 rue nationale<br />
           85670 Falleron
         </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+          <div style={{
+            borderRadius: 18,
+            boxShadow: '0 0 16px #ffe600, 0 0 32px #00ffe7',
+            overflow: 'hidden',
+            border: '2px solid var(--neon-blue)',
+            maxWidth: 420,
+            width: '90vw',
+            height: 260
+          }}>
+            <iframe
+              title="Carte DOOD'INK"
+              src="https://www.google.com/maps?q=20+rue+nationale+85670+Falleron&output=embed"
+              width="100%"
+              height="260"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
         <div style={{ marginBottom: 24, color: "#fff", fontWeight: 500, fontSize: "1.05rem" }}>
           <span style={{ color: "var(--neon-yellow)", fontWeight: 700 }}>Styles proposés :</span> Ornemental, Floral, Cartoon, Lettrage, Projet perso, Flash
         </div>
